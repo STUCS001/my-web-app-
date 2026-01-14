@@ -1,110 +1,130 @@
-* {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 body {
     margin: 0;
+    font-family: Arial, sans-serif;
     background: #f0f0f0;
 }
 
-/* HEADER */
 header {
-    background: #222;
-    color: #fff;
-    text-align: center;
+    background: #1f2937;
+    color: white;
     padding: 15px;
+    text-align: center;
     border-bottom: 4px solid orange;
 }
 
-header p {
-    color: #66b3ff;
-}
-
-/* CONTAINER */
 .container {
     display: flex;
-    gap: 20px;
-    padding: 30px;
+    gap: 15px;
+    padding: 20px;
     justify-content: center;
 }
 
-/* EVM CARD */
 .evm {
-    width: 220px;
-    background: white;
+    width: 260px;
     border-radius: 6px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    padding-bottom: 20px;
-    position: relative;
+    border: 2px solid #ccc;
+    overflow: hidden;
 }
 
-/* COLORS */
-.white { background: #ffffff; }
-.pink { background: #ffe6ef; }
-.yellow { background: #fff8d6; }
-.blue { background: #e6f0ff; }
-
-.card-header {
+.evm-header {
     font-weight: bold;
-    text-align: center;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-/* CANDIDATE */
-.candidate {
-    padding: 40px 10px;
     text-align: center;
-    font-weight: bold;
-    cursor: pointer;
 }
 
-/* DISABLED CARD */
-.evm.voted {
-    opacity: 0.35;
-    pointer-events: none;
+.evm-1 { background: #fff; }
+.evm-2 { background: #fff0f6; }
+.evm-3 { background: #fffbd6; }
+.evm-4 { background: #eef6ff; }
+
+.candidate {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    min-height: 42px;
 }
 
-/* STATUS MESSAGE */
+.selectable { cursor: pointer; }
+
+.number { width: 25px; font-weight: bold; }
+.name { flex: 1; }
+.symbol { margin-right: 8px; }
+
+/* === Realistic EVM Button === */
+.vote-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: radial-gradient(circle at top left, #60a5fa, #2563eb);
+    border: 2px solid #1e3a8a;
+    box-shadow:
+        inset -2px -2px 4px rgba(255,255,255,0.4),
+        inset 2px 2px 6px rgba(0,0,0,0.35),
+        0 3px 6px rgba(0,0,0,0.35);
+    transition: all 0.15s ease;
+}
+
+.candidate.selectable:active .vote-btn {
+    transform: scale(0.9);
+}
+
+.evm.voted .vote-btn {
+    box-shadow:
+        0 0 0 3px rgba(59,130,246,0.4),
+        0 0 12px rgba(59,130,246,0.9);
+}
+
 .status-message {
     text-align: center;
     font-weight: bold;
-    margin-top: 20px;
+    margin: 15px 0;
 }
 
-.status-next {
-    color: blue;
-}
-
-.status-done {
-    color: green;
-}
+.status-next { color: #1d4ed8; }
+.status-done { color: #15803d; }
 
 /* FINAL SUMMARY */
 #final-summary {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
 }
 
-.summary-item {
-    width: 300px;
+.summary-card {
     background: #fff;
-    padding: 12px;
-    margin: 6px;
-    border-radius: 6px;
-    text-align: center;
-    font-weight: bold;
+    width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
 }
 
-#resetBtn {
-    margin-top: 20px;
-    padding: 12px 25px;
-    font-size: 16px;
+.summary-top {
+    height: 8px;
+    background: #16a34a;
+}
+
+.summary-body {
+    padding: 25px;
+    text-align: center;
+}
+
+.summary-icon { font-size: 48px; }
+.summary-title { color: #15803d; }
+
+.summary-list div {
+    background: #f9fafb;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.reset-btn {
+    width: 100%;
+    padding: 12px;
     background: #222;
     color: #fff;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
 }
