@@ -32,7 +32,7 @@ header {
     text-align: center;
 }
 
-.evm-1 { background: #ffffff; }
+.evm-1 { background: #fff; }
 .evm-2 { background: #fff0f6; }
 .evm-3 { background: #fffbd6; }
 .evm-4 { background: #eef6ff; }
@@ -45,22 +45,11 @@ header {
     min-height: 42px;
 }
 
-.selectable {
-    cursor: pointer;
-}
+.selectable { cursor: pointer; }
 
-.number {
-    width: 25px;
-    font-weight: bold;
-}
-
-.name {
-    flex: 1;
-}
-
-.symbol {
-    margin-right: 8px;
-}
+.number { width: 25px; font-weight: bold; }
+.name { flex: 1; }
+.symbol { margin-right: 8px; }
 
 .button {
     width: 24px;
@@ -69,9 +58,10 @@ header {
     border-radius: 50%;
 }
 
-.evm.disabled {
-    opacity: 0.35;
+/* voted card */
+.evm.voted .selectable {
     pointer-events: none;
+    opacity: 0.6;
 }
 
 .status-message {
@@ -108,13 +98,8 @@ header {
     text-align: center;
 }
 
-.summary-icon {
-    font-size: 48px;
-}
-
-.summary-title {
-    color: #15803d;
-}
+.summary-icon { font-size: 48px; }
+.summary-title { color: #15803d; }
 
 .summary-list div {
     background: #f9fafb;
