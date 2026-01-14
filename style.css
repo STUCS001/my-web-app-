@@ -143,6 +143,25 @@ header {
     align-items: center;
     gap: 6px;
 }
+/* === SIZE TUNING (SAFE & MINIMAL) === */
+
+/* Make card slightly smaller */
+.evm {
+    width: 200px;              /* was ~220px */
+}
+
+/* Reduce row height slightly */
+.candidate {
+    padding: 22px 8px;         /* was larger */
+    font-size: 14px;
+}
+
+/* Reduce header height slightly */
+.title {
+    padding: 8px;
+    font-size: 14px;
+}
+
 
 
 
