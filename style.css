@@ -128,3 +128,12 @@ header {
     border-radius: 8px;
     cursor: pointer;
 }
+/* Symbol image replacement for emoji */
+.symbol-img {
+    width: 26px;
+    height: 26px;
+    margin-left: 6px;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
