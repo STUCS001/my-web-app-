@@ -129,11 +129,20 @@ header {
     cursor: pointer;
 }
 /* Symbol image replacement for emoji */
+/* Fix symbol image size & alignment */
 .symbol-img {
-    width: 26px;
-    height: 26px;
+    width: 18px;          /* 🔴 force small size */
+    height: 18px;
     margin-left: 6px;
     vertical-align: middle;
     object-fit: contain;
+    display: inline-block;
 }
+.candidate-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
 
