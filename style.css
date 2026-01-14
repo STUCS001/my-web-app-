@@ -130,3 +130,34 @@ header p {
 #resetBtn:hover {
     background: #000;
 }
+/* ===== FIX FOR STATUS TEXT VISIBILITY ONLY ===== */
+
+/* Keep card faded */
+.evm.voted {
+    opacity: 0.35;
+    pointer-events: none;
+    position: relative;
+}
+
+/* Status text should NOT fade */
+.evm.voted .status-message {
+    opacity: 1 !important;
+    font-weight: 800;
+    text-align: center;
+    color: #0b5cff;
+}
+
+/* Center the text WITHOUT affecting layout */
+.status-message {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+/* Completion message */
+.status-done {
+    color: green;
+}
+
